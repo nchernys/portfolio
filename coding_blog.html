@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Blog</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+        }
+
+        .main {
+            padding: 1em .5em 3em .5em;
+        }
+
+        .blog {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .small_top {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            padding: 0 1em 3em 1em;
+        }
+
+        .small_top .photo_container {
+            width: 12em;
+            height: 12em;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 3em 0 0 0;
+        }
+
+        .small_top .photo_container img {
+            width: 10em;
+            height: auto;
+        }
+
+        /* Natalia  */
+        .small_top h3 {
+            font-size: 1.8em;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* full-stack  */
+        .small_top p.subheading {
+            font-size: 1.5em;
+            font-weight: 300;
+            margin: .5em 0;
+        }
+
+        /* website */
+        .small_top p.website {
+            font-size: 1.2em;
+            margin: .5em 0;
+        }
+
+        /* blog word */
+        .small_top span.dot {
+            font-weight: bolder;
+            font-size: 7em;
+            padding: 0;
+            margin: -1em 0 0 0;
+        }
+
+        /* dot */
+        .small_top span.red-dot {
+            color: red;
+            font-weight: bolder;
+            font-size: 10em;
+            line-height: 1em;
+        }
+
+
+        .blog_item {
+            display: flex;
+            flex-direction: column;
+            width: auto;
+            height: 16em;
+            padding: 0 0 3em 0;
+        }
+
+        .blog_item .text_preview {
+            margin: 0 1em;
+            width: auto;
+            height: 100%;
+            white-space: wrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1),
+                    rgb(0 0 0 / .5) 70%,
+                    rgb(0 0 0 / 0));
+            mask-image: linear-gradient(rgb(0 0 0 / 1),
+                    rgb(0 0 0 / .5) 70%,
+                    rgb(0 0 0 / 0));
+        }
+
+        .arrow {
+            width: auto;
+            display: flex;
+            justify-content: end;
+            padding: 0 0.5em;
+            text-align: right;
+            margin: 1em 0;
+            background-color: rgba(219, 219, 219, .3);
+            border-radius: 3em;
+        }
+
+        #plus {
+            display: block;
+        }
+
+        #minus {
+            display: none;
+        }
+
+        .body img {
+            width: 100%;
+        }
+
+
+        .body {
+            line-height: 2em;
+            text-align: justify;
+        }
+
+        code {
+            color: rgb(119, 13, 13);
+        }
+
+        pre {
+            background-color: rgb(3, 72, 128);
+            display: block;
+            width: auto;
+            color: white;
+            padding: 2em .5em;
+            overflow-x: scroll;
+            font-size: .8em;
+        }
+
+        .article {
+            display: none;
+        }
+
+        .navigation {
+            display: block;
+            width: auto;
+            position: absolute;
+            top: 0.2em;
+            right: 0;
+        }
+
+        .navigation img {
+            padding: .5em;
+            opacity: .3;
+        }
+
+        .navigation .menu,
+        .dropdown_menu .nav-menu-heading {
+            cursor: pointer;
+        }
+
+        .nav-menu-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+
+        .nav-menu-heading #close img {
+            margin: 0 -.5em 0 0;
+        }
+
+        .dropdown_menu {
+            display: none;
+            flex-direction: column;
+            width: 70%;
+            height: auto;
+            padding: 1em 2em 3em 2em;
+            background-color: #bb3e03;
+            box-shadow: 15px 10px 20px rgb(79, 77, 77);
+            z-index: 2;
+            position: fixed;
+            text-align: left;
+            color: white;
+        }
+
+        .dropdown_menu a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown_menu_nav_body {
+            padding: 1em;
+        }
+
+        .dropdown_menu_nav_body li {
+            margin: 0 0 1em -1em;
+        }
+
+        @media only screen and (min-width: 800px) {
+
+            .main {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                padding: 0;
+                align-items: stretch;
+            }
+
+            .navigation {
+                display: none;
+            }
+
+            .small_top {
+                display: none;
+            }
+
+            .blog {
+                width: 60%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                min-height: 100%;
+
+            }
+
+            .blog_item {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                height: 16em;
+                padding: 0 0 3em 0;
+                margin: .5em 0;
+            }
+
+            .blog_item .text_preview {
+                background-color: white;
+                margin-left: 4em;
+                width: auto;
+                height: 100%;
+                white-space: wrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-mask-image: linear-gradient(rgb(0 0 0 / 1),
+                        rgb(0 0 0 / .5) 70%,
+                        rgb(0 0 0 / 0));
+                mask-image: linear-gradient(rgb(0 0 0 / 1),
+                        rgb(0 0 0 / .5) 70%,
+                        rgb(0 0 0 / 0));
+            }
+
+            .arrow {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                padding: 0 0.5em;
+                text-align: right;
+                margin: 1em auto;
+                background-color: rgba(219, 219, 219, .3);
+                border-radius: 3em;
+                box-sizing: border-box;
+            }
+
+            #plus {
+                display: block;
+            }
+
+            #minus {
+                display: none;
+            }
+
+
+            .body img {
+                width: 70%;
+                margin: 0 auto;
+            }
+
+
+            .article {
+                display: inline;
+                min-height: 100vh;
+                background-color: white;
+                width: 20em;
+                padding: 1em 2% 0 2.5%;
+                margin-right: 2m;
+                max-width: 50em;
+                box-sizing: border-box;
+                border-right: 1px rgb(175, 175, 175) dashed;
+                box-shadow: 0px 0px 15px rgb(178, 184, 196);
+            }
+
+            .article img {
+                width: calc(11em + 1vw);
+            }
+
+            .article h3 {
+                font-size: calc(1em + .2vw);
+                margin: .5em 0;
+            }
+
+            .article p {
+                font-size: 1em;
+                margin: .5em 0;
+            }
+
+            p.blog-dot {
+                margin: 0;
+                padding: 0;
+            }
+
+            span.dot {
+                font-weight: bolder;
+                font-size: 3em;
+                margin: 0;
+            }
+
+            span.red-dot {
+                color: red;
+                font-weight: bolder;
+                font-size: 5em;
+            }
+
+            p.subheading {
+                font-size: calc(.8em + .2vw);
+                margin: .5em 0;
+            }
+
+            .article a {
+                text-decoration: none;
+                color: rgb(3, 72, 128);
+                font-size: 1em;
+            }
+
+            .article ul {
+                margin-left: -2em;
+            }
+
+            pre {
+                overflow-x: scroll;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="navigation">
+        <div class="menu" id="menu">
+            <a href="http://chernysn.github.io"><img width="40" height="40"
+                    src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" /></a>
+        </div>
+
+        <div class="dropdown_menu" id="dropdown_menu">
+            <div class="nav-menu-heading"><a href="https://chernysn.github.io/">
+                    Return to Portfolio</a>
+                <div id="close"> <img width="30" height="30"
+                        src="https://img.icons8.com/ios/30/ffffff/delete-sign--v1.png" alt="delete-sign--v1" />
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="dropdown_menu_nav_body">
+                <h3>Read my blog:</h3>
+                <ul>
+                    <li><a href="/coding_blog.html">How to integrate Chart.js in your Django project?</a></li>
+                    <li><a href="/coding_blog.html">How to integrate Chart.js in your Django project?</a></li>
+                    <li><a href="/coding_blog.html">How to integrate Chart.js in your Django project?</a></li>
+                    <li><a href="/coding_blog.html">How to integrate Chart.js in your Django project?</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="article">
+            <p class="blog-dot"><span class="dot">Blog</span><span class="red-dot">.</span></p>
+            <h3>Natalia Chernysheva</h3>
+            <p class="subheading">Full Stack Web Developer</p>
+            <p> <a href="https://chernysn.github.io/">chernysn.github.io</a></p>
+            <p><img src="images/chernysheva_photo_web-2.png" alt="photo"></p>
+
+            <ul>
+                <li><a href="/coding_blog.html">How to integrate Chart.js in your Django project?</a> </li>
+            </ul>
+        </div>
+        <div class="blog">
+            <div class="small_top">
+                <p class="blog-dot"><span class="dot">Blog</span><span class="red-dot">.</span></p>
+                <h3>Natalia Chernysheva</h3>
+                <p class="subheading">Full Stack Web Developer</p>
+                <p class="website"> <a href="https://chernysn.github.io/">chernysn.github.io</a></p>
+                <div class="photo_container">
+                    <img src="images/chernysheva_photo_web-2.png" alt="photo">
+                </div>
+
+            </div>
+            <div class="blog_item">
+                <div class="arrow" id="arrow">
+                    <img id="plus" class="plus" width="40" height="40"
+                        src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/000000/external-plus-user-interface-tanah-basah-glyph-tanah-basah-2.png"
+                        alt="external-plus-user-interface-tanah-basah-glyph-tanah-basah-2" />
+                    <img id="minus" class="minus" width="40" height="40"
+                        src="https://img.icons8.com/sf-regular/48/minus-math.png" alt="minus-math" />
+                </div>
+                <div class="text_preview">
+
+                    <h1>How to integrate Chart.js in your Django project? </h1>
+
+                    <p class="body">
+                        You started a Django project and you want to generate some charts to illustrate your data
+                        with
+                        some
+                        visuals.
+                        To generate charts we need to get data from our database. So, first, we will save data to
+                        variables,
+                        which
+                        we can then use in the Chart.js Javascript code to generate the charts. </p>
+
+                    <p class="body"><img src="images/blog_students_enrollments.png" alt="chart"></p>
+                    </p>
+
+                    <p class="body"> Let's say you have a model <code>Student</code> that has an attribute
+                        <code>major</code>
+                        (Computer Science, Math, French, ...). You would like to have a chart that visually
+                        demonstrates
+                        how
+                        many students
+                        major in each field.
+                    </p>
+                    <p class="body">
+                        To simplify this demonstration, I will assume that each discipline was inserted manually for
+                        each
+                        student. If your attribute major has ManyToMany relationship with a separate class
+                        Discipline,
+                        then
+                        you
+                        should take a slightly more complicated route to collect the data. You can read about
+                        ManyToMany
+                        relationships <a
+                            href="https://openclassrooms.com/en/courses/7107341-intermediate-django/7265468-create-many-to-many-relationships">here</a>.
+                    </p>
+
+                    <caption><strong>models.py</strong></caption>
+                    <pre>
+        class Student(models.Model):
+            first_name = models.CharField(max_length=100)           
+            last_name = models.CharField(max_length=100)                  
+            major = models.CharField(max_length=100)              
+            ...        </pre>
+                    <p class="body">First, let's create a variable <code>majors</code> to collect a list of all
+                        majors
+                        (you
+                        don't want
+                        to
+                        list them one by one or to manually
+                        update the list if the university adds new majors or changes the phrasing). We will also use
+                        the
+                        .distinct()
+                        method to
+                        eliminate the duplicates.</p>
+
+                    <caption><b>views.py</b></caption>
+                    <pre>
+        majors = Student.objects.values_list('major').distinct()            </pre>
+
+                    <p class="body">Now, after we got the list of majors, let's count the number of students per
+                        each
+                        major.
+                        We
+                        will
+                        create an empty <code>students_per_major</code> list, filter the student objects by major
+                        and then save the major-students tuples to the list.</p>
+
+                    <caption><b>views.py</b></caption>
+                    <pre>
+        students_per_major = [] 
+
+        for m in majors: 
+            student_count_per_major = Student.objects.filter(major=m).count()           
+            major_students_set = (m, student_count_per_major)
+            students_per_major.append(major_students_set) </pre>
+
+                    <p class="body">The final step in views.py is to save the majors and the number of students per
+                        major in
+                        two
+                        separate lists (we will need two separate sets to create a chart: a set of labels and a set
+                        of
+                        data). To
+                        create the
+                        two lists, we will loop through the <code>students_per_major</code> list of tuples and save
+                        the
+                        first
+                        item of
+                        each
+                        tuple to the <code>majors_set</code> variable and the second item of each tuple to the
+                        <code>student_count_set</code>
+                        list.
+                    </p>
+
+                    <caption><b>views.py</b></caption>
+                    <pre>
+        majors_set = [x[0] for x in students_per_major]
+        student_count_set = [x[1] for x in students_per_major]          </pre>
+
+                    <p class="body">
+                        Now, we can use these two data sets to create our chart. We cannot transfer the data from
+                        Django
+                        to
+                        JS
+                        directly but we can do so via a Django
+                        template. In the Django html file, put the following code:
+                    </p>
+
+                    <caption><b>sample.html</b></caption>
+                    <pre>
+        {{ majors_set|json_script:"major-labels" }}
+        {{ student_count_set|json_script:"major-data" }}            </pre>
+
+                    <p class="body">The first part of the code is the variables we have created in views.py to save
+                        the
+                        names of
+                        majors and the number of students per major. The second part of the code dynamically creates
+                        an
+                        HTML
+                        code
+                        with the ids "major-labels" and "major-data". We can now create a &lt;script&gt; code to
+                        fetch
+                        the
+                        data
+                        from these variable using the .getElementbyID() JS method. You can read more on it <a
+                            href="https://docs.djangoproject.com/en/4.2/ref/templates/builtins/#json-script">here</a>.
+                    </p>
+
+                    <caption><b>sample.html</b></caption>
+                    <pre>
+        &lt;script&gt;
+        var major_labels = JSON.parse(document.getElementById('major-labels').textContent);         
+        var major_data = JSON.parse(document.getElementById('major-data').textContent);    
+        ...
+        &lt;script&gt;          </pre>
+
+
+                    <p class="body">
+                        Last but not least, we will add the labels and the data to the Chart.js code and create a
+                        chart!
+                        I
+                        expect
+                        that a number of majors at a university can be significant so representing this data as a
+                        bar
+                        chart
+                        will
+                        be
+                        both visually appealing and exlicit. And that's it!
+                    </p>
+
+                    <caption><b>sample.html</b></caption>
+                    <pre>
+        &lt;script&gt;
+
+            var major_labels = JSON.parse(document.getElementById('major-labels').textContent);         
+            var major_data = JSON.parse(document.getElementById('major-data').textContent);
+
+            new Chart("myChart", {
+                type: "bar",
+                data: {
+                    labels: major_labels,
+                    datasets: [{
+                        label: "Number of Students per Major",
+                        backgroundColor: "#48cae4",
+                        data: major_data
+                    }]
+                },
+            });
+
+        &lt;script&gt;         </pre>
+
+                    <p class="body">
+                    <h3>Have fun coding!</h3>
+                    </p>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+
+        var plus_expand = document.querySelectorAll(".plus");
+        var minus_hide = document.querySelectorAll(".minus");
+        var blog_item = document.querySelectorAll(".blog_item");
+        var text_preview = document.querySelectorAll(".text_preview");
+
+        var menu = document.getElementById("menu");
+        var dropdown_menu = document.getElementById("dropdown_menu");
+        var close = document.getElementById("close");
+
+        plus_expand.forEach((plus, i) => {
+            plus.addEventListener('click', () => {
+                text_preview[i].style.cssText = " mask-image: none; -webkit-mask-image: none;";
+                blog_item[i].style.height = "100%";
+                minus_hide[i].style.display = "block";
+                plus_expand[i].style.display = "none";
+            });
+        })
+
+        minus_hide.forEach((minus, i) => {
+            minus.addEventListener('click', () => {
+                text_preview[i].style.cssText = " mask-image: linear-gradient(black, transparent); -webkit-mask-image: linear-gradient(black, transparent);";
+                blog_item[i].style.height = "16em";
+                minus_hide[i].style.display = "none";
+                plus_expand[i].style.display = "block";
+            });
+        })
+
+    </script>
+</body>
+
+</html>
