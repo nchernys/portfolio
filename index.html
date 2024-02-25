@@ -5,20 +5,20 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natalia Chernysheva Portfolio</title>
-
-    <link rel="stylesheet" href="style_index_nav.css">
-    <link rel="stylesheet" href="style_index_welcome.css">
-    <link rel="stylesheet" href="style_index_welcome_chat.css">
-    <link rel="stylesheet" href="style_skills.css">
-    <link rel="stylesheet" href="style_all_projects.css">
-    <link rel="stylesheet" href="style_contact.css">
-    <script type="text/javascript" src="script_index.js" defer></script>
-
-
+    <link rel="preload" fetchpriority="high" as="image" href="images/welcome_page/chernysheva_photo.png"
+        type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <link defer rel="stylesheet" href="style_index_nav.css">
+    <link defer rel="stylesheet" href="style_index_welcome.css">
+    <link defer rel="stylesheet" href="style_index_welcome_chat.css">
+    <link defer rel="stylesheet" href="style_skills.css">
+    <link defer rel="stylesheet" href="style_all_projects.css">
+    <link defer rel="stylesheet" href="style_contact.css">
+    <script defer type="text/javascript" src="script_index.js" defer></script>
 
 </head>
 
@@ -26,7 +26,7 @@
     <div class="navigation">
         <ul class="nav-order nav_list" id="nav_list">
             <li class="nav"> <a href="#navigation">home</a></li>
-            <li class="nav"><a href="#projects_section">projects_section</a></li>
+            <li class="nav"><a href="#projects_section">projects</a></li>
             <li class="nav"><a href="#contact">contact</a></li>
         </ul>
         <ul class="nav-order nav_contacts">
@@ -57,26 +57,27 @@
                     <span class="lang">Bootstrap</span>
                     <span class="lang">Javascript</span>
                     <span class="lang">Node</span>
+                    <span class="lang">Express</span>
                     <span class="lang">Python</span>
                     <span class="lang">mySQL</span>
                     <span class="lang">PostgreSQL</span>
                     <span class="lang">Docker</span>
                     <span class="lang">Git</span>
-
-
                 </h3>
-                <img src="images/welcome_page/react.png" alt="">
-                <img src="images/welcome_page/django.png" alt="">
-                <img src="images/welcome_page/html.png" alt="">
-                <img src="images/welcome_page/css.png" alt="">
-                <img src="images/welcome_page/bootstrap.png" alt="">
-                <img src="images/welcome_page/javascript.png" alt="">
-                <img src="images/welcome_page/node.png" alt="">
-                <img src="images/welcome_page/python.png" alt="">
-                <img src="images/welcome_page/sql.png" alt="">
-                <img src="images/welcome_page/github.png" alt="">
-                <img src="images/welcome_page/docker.png" alt="">
-
+                <div>
+                    <img src="images/welcome_page/react.png" alt="react">
+                    <img src="images/welcome_page/django.png" alt="django">
+                    <img src="images/welcome_page/html.png" alt="html">
+                    <img src="images/welcome_page/css.png" alt="css">
+                    <img src="images/welcome_page/bootstrap.png" alt="bootstrap">
+                    <img src="images/welcome_page/javascript.png" alt="javascript">
+                    <img src="images/welcome_page/node.png" alt="node">
+                    <img src="images/welcome_page/express.png" alt="express">
+                    <img src="images/welcome_page/python.png" alt="python">
+                    <img src="images/welcome_page/sql.png" alt="sql">
+                    <img src="images/welcome_page/docker.png" alt="docker">
+                    <img src="images/welcome_page/github.png" alt="git">
+                </div>
             </div>
 
             <div class="welcome_intro_photo">
@@ -139,7 +140,7 @@
                 <div class="col txt">
                     <h2>Attract new clients with a visually compelling landing page</h2>
                     <p>HTML, CSS, Javascript, <br> Responsive design</p>
-                    <button onclick="location.href='projects_calculator.html'">View</button>
+                    <button onclick="location.href='https://twixtop-red.chernysn.tech'">View</button>
                 </div>
             </div>
 
@@ -198,7 +199,7 @@
                     <h2>Boost your online presence with an efficient e-commerce marketplace catering to diverse customer
                         segments </h2>
                     <p>Django, Python, Bootstrap, PostgreSQL, <br> Responsive design</p>
-                    <button onclick="location.href='projects_ecommerce.html'">View</button>
+                    <button onclick="location.href='https://shop-online.chernysn.tech'">View</button>
                 </div>
             </div>
 

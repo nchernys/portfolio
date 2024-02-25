@@ -154,4 +154,8 @@
     font-weight: 100;
     line-height: 1.8em;
   }
+
+  .col button {
+    font-size: 1em;
+  }
 }

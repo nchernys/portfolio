@@ -9,8 +9,10 @@
 }
 
 .inner_contact {
+  width: 100%;
   padding: 5em 0;
   display: flex;
+  justify-content: center;
 }
 
 .contact h1 {
@@ -21,31 +23,39 @@
 
 .form {
   margin: 0;
-  width: auto;
+  width: 80%;
   flex-direction: column;
   justify-content: left;
   align-items: center;
 }
 
 label {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 200;
 }
 
 input[type="text"],
-input[type="email"],
+input[type="email"] {
+  width: 100%;
+  font-size: 1em;
+  padding: 10px;
+  margin: 0.6em 0;
+  box-sizing: border-box;
+}
+
 textarea {
   width: 100%;
   font-size: 1.2em;
   padding: 10px;
   margin: 0.6em 0;
+  box-sizing: border-box;
 }
 
 button {
-  font-family: "Oxanium", cursive;
+  font-family: "Oxanium", "fallback for Oxanium";
   width: 6em;
   height: 2.5em;
-  font-size: 0.9em;
+  font-size: 1em;
   background-color: rgb(235, 159, 8);
   margin: 1.4em 0 1em 0;
   border: none;
@@ -100,11 +110,11 @@ button:active {
   border: 1px dotted rgb(45, 45, 45);
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (min-width: 1000px) {
   .inner_contact {
     height: 100vh;
     padding: 0;
-    width: 90%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,25 +127,31 @@ button:active {
   }
 
   label {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   input[type="text"],
-  input[type="email"],
-  textarea {
+  input[type="email"] {
     padding: 10px;
     margin: 1em 0;
     box-sizing: border-box;
+    font-size: 1em;
+    font-family: "Oxanium";
   }
 
   textarea {
     height: 8em;
+    padding: 10px;
+    margin: 1em 0;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    font-family: "Oxanium";
   }
 
   .inner_contact button {
     width: 7em;
     height: 3em;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   #page_overlay {

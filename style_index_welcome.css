@@ -3,14 +3,17 @@
   height: 100%;
   position: relative;
   padding: 5% 5% 15% 5%;
+  box-sizing: border-box;
 }
 
 .home_inner {
   margin: 0 auto;
+  padding: 0;
   width: 95%;
-  height: auto;
+  height: 95%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .welcome_intro_text {
@@ -80,12 +83,13 @@
 @media screen and (min-width: 600px) {
   .home {
     width: 100%;
-    padding: 0;
-    height: 60vh;
+    padding: 15% 5%;
+    height: auto;
+    box-sizing: border-box;
   }
   .home_inner {
-    width: 75%;
-    height: 100%;
+    width: 90%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -97,9 +101,9 @@
   }
 
   .welcome_intro_text {
-    width: 70%;
+    width: 60%;
     height: 50%;
-    margin: 0 5% 0 0;
+    margin: 0 8% 0 0;
   }
 
   .welcome_intro_photo {
@@ -155,7 +159,7 @@
   .welcome_intro_text {
     width: 50%;
     height: 50%;
-    margin: 0 5% 0 0;
+    margin: 0;
   }
 
   .welcome_intro_photo {
@@ -172,23 +176,23 @@
     padding-bottom: var(--width);
   }
   .welcome_intro_text h1 {
-    font-size: 2.2em;
+    font-size: 2.5em;
   }
 
   .welcome_intro_text h2 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 300;
   }
 
   .welcome_intro_text h3 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 100;
     color: white;
     margin: 1em 0;
   }
 
   .welcome_intro_text img {
-    width: 2em;
+    width: 1.8em;
     height: auto;
   }
 
