@@ -1,13 +1,13 @@
 .home {
   width: auto;
-  height: 100%;
+  height: auto;
   position: relative;
-  padding: 5% 5% 15% 5%;
+  padding: 10% 5% 20% 5%;
   box-sizing: border-box;
 }
 
 .home_inner {
-  margin: 0 auto;
+  margin: 5% auto;
   padding: 0;
   width: 95%;
   height: 95%;
@@ -18,8 +18,15 @@
 
 .welcome_intro_text {
   width: 100%;
-  height: auto;
-  margin: 0 0 5%;
+  height: 100%;
+  margin: 0 0 12%;
+  order: 1;
+}
+
+.welcome_intro_blurb p {
+  font-size: 1em;
+  line-height: 2em;
+  padding: 0 1.5em 0 0.5em;
 }
 
 .welcome_intro_photo {
@@ -27,6 +34,7 @@
   height: auto;
   display: flex;
   justify-content: center;
+  order: 2;
 }
 
 .photo {
@@ -62,17 +70,19 @@
   font-weight: 100;
   color: white;
   margin: 1em 0;
+  display: none;
 }
 
 .welcome_intro_text img {
-  width: 2em;
+  width: 1.8em;
   height: auto;
   margin: 0.3em 0.1em;
+  display: none;
 }
 
 .lang {
   background-color: #343a40;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.2em;
   border-radius: 5em;
   line-height: 3em;
   margin: 0 0.3em 0 0;
@@ -85,8 +95,10 @@
     width: 100%;
     padding: 15% 5%;
     height: auto;
+    min-height: none;
     box-sizing: border-box;
   }
+
   .home_inner {
     width: 90%;
     height: auto;
@@ -95,37 +107,64 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 3% 0;
+    padding: 0;
     box-sizing: border-box;
     transform: translateY(-3em);
   }
 
   .welcome_intro_text {
     width: 60%;
-    height: 50%;
-    margin: 0 8% 0 0;
+    height: auto;
+    margin: 0 0 0 8%;
+    order: 2;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .welcome_intro_text p {
+    padding: 0;
+  }
+
+  .welcome_intro_text img {
+    display: inline;
+  }
+
+  .welcome_intro_blurb {
+    width: 100%;
+    font-size: 0.9em;
+    padding: 1em 8% 0 0;
+    line-height: 2.5em;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.75;
   }
 
   .welcome_intro_photo {
     width: 30%;
     height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 
   .photo {
-    width: 100%;
-    --width: 100%;
+    width: 90%;
+    --width: 90%;
     padding-bottom: var(--width);
   }
 
   .welcome_intro_text h1 {
-    font-size: 2.8em;
+    font-size: 3em;
+    margin: 0;
   }
 
   .welcome_intro_text h2 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .welcome_intro_text h3 {
@@ -142,45 +181,37 @@
     width: 100%;
     padding: 0;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .home_inner {
-    width: 75%;
-    height: 100%;
-    margin: 0 auto;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 3% 0;
+    align-items: stretch;
+    padding: 0;
     box-sizing: border-box;
-    transform: translateY(-3em);
+    transform: translateY(0);
   }
 
   .welcome_intro_text {
-    width: 50%;
-    height: 50%;
+    width: 65%;
     margin: 0;
-  }
-
-  .welcome_intro_photo {
-    width: 50%;
-    height: 50%;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
-  .photo {
-    width: 100%;
-    --width: 100%;
-    padding-bottom: var(--width);
-  }
   .welcome_intro_text h1 {
-    font-size: 2.5em;
+    font-size: 2.4em;
+    margin: 0.7em 0 0.5em;
   }
 
   .welcome_intro_text h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 300;
   }
 
@@ -188,7 +219,13 @@
     font-size: 0.9em;
     font-weight: 100;
     color: white;
-    margin: 1em 0;
+    margin: 0.25em 0;
+  }
+
+  .welcome_intro_blurb {
+    font-size: 1em;
+    height: 100%;
+    padding: 0;
   }
 
   .welcome_intro_text img {
@@ -196,11 +233,21 @@
     height: auto;
   }
 
+  .welcome_intro_photo {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 2em 0 0;
+  }
+
   .photo {
     overflow: hidden;
     border-radius: 50%;
-    width: 60%;
-    --width: 60%;
+    width: 80%;
+    --width: 80%;
     padding-bottom: var(--width);
     position: relative;
   }
@@ -213,8 +260,8 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1500px) {
   .home_inner {
-    width: 72%;
+    width: 60%;
   }
 }
