@@ -651,14 +651,22 @@ button {
   width: 6em;
   height: 2.5em;
   font-size: 0.9em;
-  background-color: rgb(235, 159, 8);
   margin: 1.4em 0 1em 0;
   border: none;
-  color: #343a40;
 }
 
 button:active {
   transform: translate(1px, 2px);
+}
+
+button.yellow {
+  background-color: rgb(235, 159, 8);
+  color: #343a40;
+}
+
+button.blue {
+  background-color: rgb(8, 182, 235);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #form-message {

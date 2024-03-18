@@ -71,22 +71,6 @@
                     <span class="lang">Docker</span>
                     <span class="lang">Git</span>
                 </h3>
-                <!--
-                    <div>
-                        <img src="images/welcome_page/react.png" alt="react">
-                        <img src="images/welcome_page/django.png" alt="django">
-                        <img src="images/welcome_page/html.png" alt="html">
-                        <img src="images/welcome_page/css.png" alt="css">
-                        <img src="images/welcome_page/bootstrap.png" alt="bootstrap">
-                        <img src="images/welcome_page/javascript.png" alt="javascript">
-                        <img src="images/welcome_page/node.png" alt="node">
-                        <img src="images/welcome_page/express.png" alt="express">
-                        <img src="images/welcome_page/python.png" alt="python">
-                        <img src="images/welcome_page/sql.png" alt="sql">
-                        <img src="images/welcome_page/docker.png" alt="docker">
-                        <img src="images/welcome_page/github.png" alt="git">
-                    </div>
-                    -->
                 <div class="welcome_intro_blurb">
                     <p>Hey, I'm Natalia! I'm a full stack developer. <br /> Working on websites allows me to blend
                         technical
@@ -142,98 +126,202 @@
     <div class="projects_section" id="projects_section">
         <div class="wrapper">
 
+            <div class="row order">
+                <div class="col txt">
+                    <h2>Course management system </h2>
+                    <p>MERN stack: MongoDB, ExpressJS, ReactJS, NodeJS </p>
+                    <ul>
+                        <li>
+                            integrates RESTful APIs to communicate with the MongoDB to add, update, delete
+                            students and courses, to enroll and disenroll students from the courses, to create, update,
+                            and delete course assignments and to post and update course grades
+                        </li>
+                        <li>implements an easy-to-use click function to post and update grades in the
+                            gradebook table</li>
+                    </ul>
+
+
+                    <div class="button-group-projects">
+                        <button class="yellow" onclick="window.location.href='https://school-dashboard.chernysn.tech'">
+                            View</button>
+                        <button class="blue"
+                            onclick="window.location.href='https://github.com/nchernys/school-dashboard-MERN'">GitHub</button>
+                    </div>
+                </div>
+                <div class='col col-img v-col'>
+
+                    <img class="img_back" src="images/projects_page/school-management.png" alt="">
+
+                </div>
+            </div>
+
+
+
             <div class="row">
-                <div class='col v-col'>
+                <div class='col col-img v-col'>
 
                     <img class="img_back" src="images/projects_page/twixtop-design.png" alt="">
-                    <div class="overlay"></div>
                 </div>
 
                 <div class="col txt">
-                    <h2>Attract new clients with a visually compelling landing page</h2>
-                    <p>HTML, CSS, Javascript, <br> Responsive design</p>
-                    <button onclick="location.href='https://twixtop-red.chernysn.tech'">View</button>
+                    <h2>Landing page</h2>
+                    <p>ReactJs, CSS </p>
+                    <ul>
+                        <li>features a hero with the call-for-action button</li>
+                        <li>implements an image gallery with an option to magnify images upon hover and to expand to
+                            full-size upon
+                            click</li>
+                        <li>enables two image slider options:
+                            <ul>
+                                <li>updates the preview images on the left or right button click, cycling through a set
+                                    of three images at
+                                    a time</li>
+                                <li>transitions between individual images within the full-view mode</li>
+                        </li>
+                    </ul>
+                    <li>mobile-first, responsive design</li>
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow" onclick="location.href='https://twixtop-red.chernysn.tech'">View</button>
+                        <button class="blue"
+                            onclick="location.href='https://github.com/nchernys/twixtop-design'">GitHub</button>
+                    </div>
                 </div>
             </div>
 
             <div class="row order">
                 <div class="col txt">
-                    <h2>Capture the attention of eager coffee lovers and health enthusiasts with a user-friendly webpage
-                        to visit or conveniently order online </h2>
-                    <p>HTML, CSS, Javascript, <br> Responsive design</p>
-                    <button onclick="window.location.href='https://green-cafe.chernysn.tech'">
-                        View</button>
-                </div>
-                <div class='col v-col'>
-                    <img class="img_back" src="images/cafe-front-mobile.png" alt="">
-                    <div class="overlay">
+                    <h2>Landing page featuring a menu and a shopping cart</h2>
+                    <p>HTML, CSS, Javascript</p>
+                    <ul>
+                        <li>utilizes JSON data to dynamically render the menu items based
+                            on the data stored in the
+                            JSON file </li>
+                        <li>the cart functionality computes the total price by incorporating item
+                            prices and quantities, while
+                            also offering users the ability to select a tip amount</li>
+                        <li>mobile-first, responsive design</li>
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow" onclick="window.location.href='https://green-cafe.chernysn.tech'">
+                            View</button>
+                        <button class="blue"
+                            onclick="window.location.href='https://github.com/nchernys/green-cafe'">GitHub</button>
                     </div>
+                </div>
+                <div class='col col-img v-col'>
+                    <img class="img_back" src="images/cafe-front-mobile.png" alt="">
                 </div>
             </div>
 
 
             <div class="row">
-                <div class='col v-col'>
+                <div class='col col-img v-col'>
                     <img class="img_back" src="images/projects_page/calc_img.png" alt="">
-                    <div class="overlay"></div>
+
                 </div>
 
                 <div class="col txt">
-                    <h2>Incorporate a user-friendly tool to empower your clients to effortlessly calculate the compound
-                        interest on their investments</h2>
-                    <p>HTML, CSS, Javascript, <br> Responsive design</p>
-                    <button onclick="location.href='projects_calculator.html'">View</button>
+                    <h2>Compound interest calculator</h2>
+                    <p>HTML, CSS, Javascript</p>
+                    <ul>
+                        <li>performs arithmetic operations </li>
+                        <li>computes compond interest on an investment based on the user input and the compound interest
+                            with monthly deposits
+                            formula (A = P(1 + r/n)^(nt) + PMT × (((1 + r/n)^(nt) - 1) / (r/n)))</li>
+                        <li>mobile-first, responsive design</li>
+                    </ul>
+                    <div class="button-group-projects"> <button class="yellow"
+                            onclick="location.href='projects_calculator.html'">View</button>
+                        <button class="blue"
+                            onclick="window.location.href='https://github.com/nchernys/portfolio'">GitHub</button>
+                    </div>
                 </div>
             </div>
 
             <div class="row order">
                 <div class="col txt order">
-                    <h2>Optimize your schedule with the help of a dynamic to-do list</h2>
-                    <p>HTML, CSS, Javascript, LocalStorage, <br> Responsive design</p>
-                    <button onclick="location.href='projects_todo.html'">View</button>
+                    <h2>To-do list</h2>
+                    <p>HTML, CSS, Javascript, Local Storage</p>
+                    <ul>
+                        <li>implements an input field of type "date" to allow users to set a deadline</li>
+                        <li>integrates the Local Storage to store and update the tasks</li>
+                        <li>mobile-first, responsive design</li>
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow" onclick="location.href='projects_todo.html'">View</button>
+                        <button class="blue"
+                            onclick="window.location.href='https://github.com/nchernys/portfolio'">GitHub</button>
+                    </div>
                 </div>
 
-                <div class='col v-col order'>
+                <div class='col col-img v-col order'>
                     <img class="img_back" src="images/projects_page/todo.png" alt="">
-                    <div class="overlay"></div>
+
                 </div>
 
             </div>
 
             <div class="row">
-                <div class='h-col col'>
+                <div class='h-col col col-img'>
                     <img class="img_back" src="images/projects_page/ecommerce.png" alt="">
-                    <div class="overlay">
-                    </div>
                 </div>
 
                 <div class="col txt">
-                    <h2>Boost your online presence with an efficient e-commerce marketplace catering to diverse customer
-                        segments </h2>
-                    <p>Django, Python, Bootstrap, PostgreSQL, <br> Responsive design</p>
-                    <button onclick="location.href='https://shop-online.chernysn.tech'">View</button>
+                    <h2>Online store </h2>
+                    <p>Django, Python, Bootstrap, SQlite (or PostgreSQL)</p>
+                    <ul>
+                        <li>implements signup, login and logout authentication to personalize user carts</li>
+                        <li>utilizes object-oriented programming (OOP) approach </li>
+                        <li>uses reusable components to dynamically generate cards displaying product details</li>
+                        <li>enables search by keyword functionality</li>
+                        <li>leverages cart functionality to update items and their quantities dynamically, while also
+                            calculating the total order cost
+                            based on the updated items and their prices</li>
+                        <li>mobile-first, responsive design</li>
+
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow" onclick="location.href='https://shop-online.chernysn.tech'">View</button>
+                        <button class="blue"
+                            onclick="location.href='https://github.com/nchernys/e-marketplace'">GitHub</button>
+                    </div>
                 </div>
             </div>
 
             <div class="row order">
 
                 <div class="col txt">
-                    <h2>Ensure your favorite pages are readily accessible by utilizing the Mozilla Bookmark extension
+                    <h2>Mozilla bookmark extension
                     </h2>
-                    <p>HTML, CSS, Javascript</p>
-                    <button
-                        onclick="window.location.href='https://addons.mozilla.org/en-US/firefox/addon/bookmark_and_comment/'">
-                        View</button>
-                </div>
-                <div class='h-col col'>
-                    <img class="img_back" src="images/projects_page/mozilla_addon.png" alt="">
-                    <div class="overlay">
+                    <p>Mozilla Extension, HTML, CSS, Javascript</p>
+                    <ul>
+                        <li>optimizes the process of saving bookmarks by retrieving both the URL
+                            and title of the tab</li>
+                        <li>features a textarea field enabling users to add comments to links for easier content search
+                        </li>
+                        <li>enables users to add new tags via input field of type "text"</li>
+                        <li>stores tags in Local Storage, enabling the creation of reusable tags and optimzing the way
+                            to
+                            add previously used tags to links</li>
+                        <li>enhances link search functionality by enabling users to click on a tag for filtering</li>
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow"
+                            onclick="window.location.href='https://addons.mozilla.org/en-US/firefox/addon/bookmark_and_comment/'">
+                            View</button>
+                        <button class="blue"
+                            onclick="window.location.href='https://github.com/nchernys/mozilla-extension-bookmark'">
+                            GitHub</button>
                     </div>
+                </div>
+                <div class='h-col col col-img'>
+                    <img class="img_back" src="images/projects_page/mozilla_addon.png" alt="">
                 </div>
 
             </div>
-
         </div>
+    </div>
 
     </div>
 
@@ -247,7 +335,7 @@
                 <input type="email" name="email" id="email" required> <br>
                 <label for="message">Your request:</label><br>
                 <textarea name="message" id="message" cols="50" rows="6" required></textarea><br>
-                <button type="submit" id="submit">Submit</button>
+                <button type="submit" class="yellow" id="submit">Submit</button>
             </form>
         </div>
     </div>

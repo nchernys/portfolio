@@ -1,3 +1,33 @@
+.button-group-projects {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: "Oxanium", "fallback for Oxanium";
+  width: 6em;
+  height: 2.5em;
+  font-size: 0.9em;
+  margin: 1.4em 0.5em 1em 0;
+  border: none;
+}
+
+button:active {
+  transform: translate(1px, 2px);
+}
+
+button.yellow {
+  background-color: rgb(235, 159, 8);
+  background-color: white;
+  border: 1.5px solid #343a40;
+}
+
+button.blue {
+  background-color: rgb(8, 182, 235);
+  background-color: #343a40;
+  color: white;
+}
+
 .projects_section {
   width: 100%;
   height: auto;
@@ -19,8 +49,13 @@
   order: 2;
 }
 
+.wrapper .order .col:nth-child(2) {
+  order: 1;
+}
+
 .row {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,38 +64,58 @@
 
 .row .txt {
   text-align: center;
-  padding: 0em 1em;
+  padding: 0em 2em;
 }
 
 .row .txt h2 {
   font-size: 1.8em;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 1.5em;
   margin: 0 0 1em 0;
 }
 
 .row .txt p {
   font-size: 1.2em;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.5em;
 }
 
+.row .txt ul li {
+  font-size: 1.1em;
+  font-weight: 200;
+  margin: 0 0.8em 0 -1.2em;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.row .txt ul li ul li {
+  margin: auto auto auto -1.5em;
+}
+
 .col {
+  width: 100%;
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   border-radius: 0;
 }
 
 .v-col {
-  padding: 5em 1.5em;
+  padding: 5em 2em;
 }
 
 .h-col {
-  padding: 5em 1.5em;
+  padding: 5em 2em;
 }
 
 .col button {
   padding: 0.5em 1em;
   font-size: 1.2em;
-  color: #343a40ac;
+  margin: 3em 0.5em;
 }
 
 .img_back {
@@ -69,8 +124,8 @@
   height: auto;
 }
 
-.overlay {
-  color: white;
+.col-img {
+  background: white;
 }
 
 @media screen and (min-width: 600px) {
@@ -89,20 +144,33 @@
 
   .row {
     display: flex;
+    height: 45em;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
   }
 
   .col {
-    width: 35em;
-    height: 35em;
-    padding: 5em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    box-sizing: border-box;
+    width: 50%;
+    flex: 1;
+  }
+
+  .v-col {
+    padding: auto 1em;
+  }
+
+  .h-col {
+    padding: auto 1em;
+  }
+
+  .row .txt ul li {
+    margin: 0 1em 0 -2em;
+    line-height: 1.5em;
+    text-align: left;
+  }
+
+  .row .txt ul li ul li {
+    margin: auto auto auto -1.5em;
   }
 
   .wrapper .order .col:nth-child(1) {
@@ -113,7 +181,11 @@
     text-align: left;
     align-items: flex-start;
     justify-content: center;
-    padding: 5em;
+    padding: 2em;
+  }
+
+  .col-img {
+    background-color: rgba(54, 59, 64, 0.05);
   }
 
   .col img {
@@ -121,40 +193,27 @@
     height: 100%;
     object-fit: contain;
   }
-
-  .overlay {
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(54, 59, 64, 0.05);
-    opacity: 1;
-  }
 }
 
 @media screen and (min-width: 1000px) {
-  .col {
-    width: 35em;
-    height: 35em;
-  }
-
   .row .txt h2 {
-    font-size: 1.5em;
-    font-weight: 100;
+    font-size: 1.3em;
+    font-weight: 500;
     line-height: 1.8em;
   }
 
   .row .txt p {
-    font-size: 1.1em;
-    font-weight: 100;
-    line-height: 1.8em;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1em;
   }
 
+  .row .txt ul li {
+    font-size: 1em;
+    font-weight: 200;
+    margin: 0.5em 0;
+  }
   .col button {
     font-size: 1em;
   }
