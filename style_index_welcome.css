@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+.home_inner div:nth-child(2) {
+  order: 2;
+}
+
 .welcome_intro_text {
   width: 100%;
   height: 100%;
@@ -40,10 +44,11 @@
 .photo {
   overflow: hidden;
   border-radius: 50%;
-  width: 60%;
-  --width: 60%;
+  width: 50%;
+  --width: 50%;
   padding-bottom: var(--width);
   position: relative;
+  margin-bottom: 2.5em;
 }
 
 .photo img {

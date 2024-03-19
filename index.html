@@ -30,20 +30,26 @@
             <li class="nav"><a href="#contact">contact</a></li>
         </ul>
         <ul class="nav-order nav_contacts">
-            <li class="nav-contact"><a href="mailto:natasha.e.chernysheva@gmail.com"><img class="large_screen"
+            <li class="nav-contact"><a href="mailto:chernysn@gmail.com"><img class="large_screen"
                         src="https://img.icons8.com/ios/100/000000/gmail-new.png" alt="gmail" /><img
                         class="small_screen" src="https://img.icons8.com/ios/100/ffffff/gmail-new.png"
                         alt="gmail" /></a></li>
-            <li class="nav-contact"><a href="mailto:136198764+chernysn@users.noreply.github.com"><img
-                        class="large_screen" src="https://img.icons8.com/ios-filled/100/000000/github.png"
-                        alt="github"><img class="small_screen"
-                        src="https://img.icons8.com/ios-filled/100/ffffff/github.png" alt="github"></a></li>
+            <li class="nav-contact"><a href="https://github.com/nchernys"><img class="large_screen"
+                        src="https://img.icons8.com/ios-filled/100/000000/github.png" alt="github"><img
+                        class="small_screen" src="https://img.icons8.com/ios-filled/100/ffffff/github.png"
+                        alt="github"></a></li>
             <li class="nav-contact"><a href="https://www.linkedin.com/in/natalia-chernysheva-a24a4a229/"><img
                         class="large_screen" src="https://img.icons8.com/ios-filled/100/000000/linkedin.png"
                         alt="linkedin" /> <img class="small_screen"
                         src="https://img.icons8.com/ios-filled/100/ffffff/linkedin.png" alt="linkedin" /> </a></li>
+            <li class="nav-contact"><a href="/files/Natalia_Chernysheva_CV.pdf"><img class="large_screen"
+                        src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/000000/external-preparing-a-concise-cv-for-new-job-opportunity-jobs-duo-tal-revivo.png"
+                        alt="CV" /> <img class="small_screen"
+                        src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/100/ffffff/external-preparing-a-concise-cv-for-new-job-opportunity-jobs-duo-tal-revivo.png"
+                        alt="CV" /> </a></li>
         </ul>
     </div>
+
 
     <div class="home" id="home">
         <div class="home_inner">
@@ -72,9 +78,15 @@
                     <span class="lang">Git</span>
                 </h3>
                 <div class="welcome_intro_blurb">
-                    <p>Hey, I'm Natalia! I'm a full stack developer. <br /> Working on websites allows me to blend
+                    <p>Hey, I'm Natalia, and I'm a full stack developer. I'm proficient in <strong>HTML</strong>,
+                        <strong>CSS</strong>, <strong>Javascript</strong>, <strong>Bootstrap</strong>,
+                        <strong>TailwindCSS</strong>, <strong>MERN stack</strong> (MongoDB, ExpressJS, ReactJS, NodeJS),
+                        <strong>Django stack</strong> (Python), and databases <strong>MySQL</strong>,
+                        <strong>PostgreSQL</strong>, <strong>MongoDB</strong>. Working on websites allows me to
+                        blend
                         technical
-                        skills with creativity, ensuring a seamless and visually appealing user experience. As a
+                        skills with creativity, ensuring a seamless and visually appealing <strong>user
+                            experience</strong>. As a
                         full-stack developer, I'm here to transform your concepts into tangible outcomes.
                     </p>
                 </div>
@@ -125,12 +137,47 @@
 
     <div class="projects_section" id="projects_section">
         <div class="wrapper">
+            <h1 class="project-title">Projects</h1>
+
+            <div class="row">
+                <div class='col img col-img v-col'>
+
+                    <img class="img_back" src="images/projects_page/room_reservation_page.jpg"
+                        alt="room reservation project">
+                </div>
+
+                <div class="col txt">
+                    <h2>Hotel reservation system</h2>
+                    <p>MERN stack: MongoDB, ExpressJS, ReactJS, NodeJS, TailwindCSS</p>
+                    <ul>
+                        <li>features the React Calendar component enabling to display the dates available for the
+                            reservation and to highlight the dates selected by the user</li>
+                        <li>prompts the guest to select different dates if the selected range of dates includes
+                            unavailable dates</li>
+                        <li>uses RESTful APIs to fetch the guest personal details and the dates of the reservation from
+                            the form
+                            on the client side and the room details such as room number and price from the dababase and
+                            to save them as a new order in the database</li>
+                        <li>features the admin dashboard enabling the admins to add, update, and delete room details and
+                            to review the guest orders</li>
+                        <li>implements the PDF invoice generator based on the order details</li>
+
+                        <li>mobile-first, responsive design</li>
+                    </ul>
+                    <div class="button-group-projects">
+                        <button class="yellow" style="width: 10em">Coming Soon</button>
+                        <button class="blue"
+                            onclick="location.href='https://github.com/nchernys/hotel-lake'">GitHub</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="row order">
                 <div class="col txt">
                     <h2>Course management system </h2>
                     <p>MERN stack: MongoDB, ExpressJS, ReactJS, NodeJS </p>
                     <ul>
+                        <li>features user authentication system (signup, login, logout)</li>
                         <li>
                             integrates RESTful APIs to communicate with the MongoDB to add, update, delete
                             students and courses, to enroll and disenroll students from the courses, to create, update,
@@ -148,9 +195,10 @@
                             onclick="window.location.href='https://github.com/nchernys/school-dashboard-MERN'">GitHub</button>
                     </div>
                 </div>
-                <div class='col col-img v-col'>
+                <div class='col img col-img v-col'>
 
-                    <img class="img_back" src="images/projects_page/school-management.png" alt="">
+                    <img class="img_back" src="images/projects_page/school-management.png"
+                        alt="school management project">
 
                 </div>
             </div>
@@ -158,9 +206,9 @@
 
 
             <div class="row">
-                <div class='col col-img v-col'>
+                <div class='col img col-img v-col'>
 
-                    <img class="img_back" src="images/projects_page/twixtop-design.png" alt="">
+                    <img class="img_back" src="images/projects_page/twixtop-design.png" alt="design studio project">
                 </div>
 
                 <div class="col txt">
@@ -191,7 +239,7 @@
 
             <div class="row order">
                 <div class="col txt">
-                    <h2>Landing page featuring a menu and a shopping cart</h2>
+                    <h2>Landing page w/ a menu and a shopping cart</h2>
                     <p>HTML, CSS, Javascript</p>
                     <ul>
                         <li>utilizes JSON data to dynamically render the menu items based
@@ -209,12 +257,12 @@
                             onclick="window.location.href='https://github.com/nchernys/green-cafe'">GitHub</button>
                     </div>
                 </div>
-                <div class='col col-img v-col'>
-                    <img class="img_back" src="images/cafe-front-mobile.png" alt="">
+                <div class='col img col-img v-col'>
+                    <img class="img_back" src="images/cafe-front-mobile.png" alt="cafe landing page project">
                 </div>
             </div>
 
-
+            <!--
             <div class="row">
                 <div class='col col-img v-col'>
                     <img class="img_back" src="images/projects_page/calc_img.png" alt="">
@@ -259,16 +307,15 @@
                     <img class="img_back" src="images/projects_page/todo.png" alt="">
 
                 </div>
-
             </div>
-
+-->
             <div class="row">
-                <div class='h-col col col-img'>
-                    <img class="img_back" src="images/projects_page/ecommerce.png" alt="">
+                <div class='h-col col img col-img'>
+                    <img class="img_back" src="images/projects_page/ecommerce.png" alt="online marketplace project">
                 </div>
 
                 <div class="col txt">
-                    <h2>Online store </h2>
+                    <h2>Online marketplace </h2>
                     <p>Django, Python, Bootstrap, SQlite (or PostgreSQL)</p>
                     <ul>
                         <li>implements signup, login and logout authentication to personalize user carts</li>
@@ -301,10 +348,9 @@
                         <li>features a textarea field enabling users to add comments to links for easier content search
                         </li>
                         <li>enables users to add new tags via input field of type "text"</li>
-                        <li>stores tags in Local Storage, enabling the creation of reusable tags and optimzing the way
-                            to
-                            add previously used tags to links</li>
-                        <li>enhances link search functionality by enabling users to click on a tag for filtering</li>
+                        <li>optimizes tagging with reusable tags automatically storing tags in the Local Storage</li>
+                        <li>enhances link search functionality by enabling users to click on a tag for filtering links
+                        </li>
                     </ul>
                     <div class="button-group-projects">
                         <button class="yellow"
@@ -315,8 +361,8 @@
                             GitHub</button>
                     </div>
                 </div>
-                <div class='h-col col col-img'>
-                    <img class="img_back" src="images/projects_page/mozilla_addon.png" alt="">
+                <div class='h-col col img col-img'>
+                    <img class="img_back" src="images/projects_page/mozilla_addon.png" alt="mozilla extension project">
                 </div>
 
             </div>

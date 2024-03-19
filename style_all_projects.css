@@ -1,3 +1,7 @@
+.project-title {
+  margin-bottom: 1em;
+  font-size: 2.4em;
+}
 .button-group-projects {
   display: flex;
   justify-content: center;
@@ -8,7 +12,7 @@ button {
   width: 6em;
   height: 2.5em;
   font-size: 0.9em;
-  margin: 1.4em 0.5em 1em 0;
+  margin: 1.4em 0.5em 2em 0;
   border: none;
 }
 
@@ -64,7 +68,7 @@ button.blue {
 
 .row .txt {
   text-align: center;
-  padding: 0em 2em;
+  box-sizing: border-box;
 }
 
 .row .txt h2 {
@@ -95,7 +99,7 @@ button.blue {
 .col {
   width: 100%;
   flex: 1;
-  padding: 1em;
+  padding: 8em 1.5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,7 +119,7 @@ button.blue {
 .col button {
   padding: 0.5em 1em;
   font-size: 1.2em;
-  margin: 3em 0.5em;
+  margin: 3em 0.5em 1em;
 }
 
 .img_back {
@@ -125,10 +129,13 @@ button.blue {
 }
 
 .col-img {
-  background: white;
+  background-color: rgba(54, 59, 64, 0.05);
 }
 
 @media screen and (min-width: 600px) {
+  .project-title {
+    display: none;
+  }
   .projects_section {
     padding: 5em 0;
     max-height: auto;
@@ -144,23 +151,26 @@ button.blue {
 
   .row {
     display: flex;
-    height: 45em;
+    min-height: 50em;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
   }
 
-  .col {
-    width: 50%;
-    flex: 1;
-  }
-
-  .v-col {
-    padding: auto 1em;
+  .row .txt {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   .h-col {
-    padding: auto 1em;
+    padding: auto auto;
+  }
+
+  .col {
+    width: 50%;
+    padding: 3em;
+    flex: 1;
   }
 
   .row .txt ul li {
@@ -177,13 +187,6 @@ button.blue {
     order: 0;
   }
 
-  .row .txt {
-    text-align: left;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2em;
-  }
-
   .col-img {
     background-color: rgba(54, 59, 64, 0.05);
   }
@@ -193,9 +196,21 @@ button.blue {
     height: 100%;
     object-fit: contain;
   }
+
+  .v-col img {
+    height: 80%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .project-title {
+    display: none;
+  }
+
+  .row {
+    height: 50em;
+  }
+
   .row .txt h2 {
     font-size: 1.3em;
     font-weight: 500;
@@ -206,13 +221,12 @@ button.blue {
     margin: 0;
     font-size: 1em;
     font-weight: 300;
-    line-height: 1em;
   }
 
   .row .txt ul li {
     font-size: 1em;
     font-weight: 200;
-    margin: 0.5em 0;
+    margin: 0.5em 0 0 -2em;
   }
   .col button {
     font-size: 1em;
