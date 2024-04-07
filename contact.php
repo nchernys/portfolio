@@ -1,19 +1,26 @@
 <?php
-$name = $_POST['name'];
-$email= $_POST['email'];
-$request= $_POST['request'];
- 
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
+$request = isset($_POST['request']) ? htmlspecialchars($_POST['request']) : '';
+
 $to = "chernysn@gmail.com";
 $subject = "FROM WEB DEV PAGE";
- 
-$txt ="Name = ". $name . "\r\n  Email = "
-    . $email . "\r\n Request =" . $request;
- 
+
 $headers = "From: noreply@demosite.com" . "\r\n" .
             "CC: somebodyelse@example.com";
-if($email != NULL) {
-    mail($to, $subject, $txt, $headers);
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    // Handle invalid email address
+    die("Invalid email address");
 }
- 
-header("Location:index.html");
-?>
+
+$txt = "Name: $name\r\nEmail: $email\r\nRequest: $request";
+
+if(!empty($email)) {
+    $additional_headers = "-f noreply@demosite.com"; 
+    mail($to, $subject, $txt, $headers, $additional_headers);
+}
+
+// Redirect after processing
+header("Location: index.html");
+exit(); 
