@@ -177,6 +177,7 @@ button.blue {
     margin: 0 1em 0 -2em;
     line-height: 1.5em;
     text-align: left;
+    font-size: 0.95em;
   }
 
   .row .txt ul li ul li {
@@ -224,7 +225,7 @@ button.blue {
   }
 
   .row .txt ul li {
-    font-size: 1em;
+    font-size: 0.85em;
     font-weight: 200;
     margin: 0.5em 0 0 -2em;
   }
