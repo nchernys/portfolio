@@ -1,13 +1,3 @@
-window.onscroll = function () {
-  const bar = document.getElementById("prog_bar");
-  let h = document.documentElement;
-  let st = h.scrollTop || document.body.scrollTop;
-  let sh = h.scrollHeight || document.body.scrollHeight;
-  let percent = (st / (sh - h.clientHeight)) * 100 + 1;
-  let roundedPercept = Math.floor(percent);
-  bar.style.width = roundedPercept + "%";
-};
-
 let chat_btn = document.getElementById("pulse");
 let chat = document.getElementById("chat");
 
