@@ -173,6 +173,10 @@ button.blue {
     flex: 1;
   }
 
+  .row .txt h2 {
+    margin: 0 0 1em 0;
+  }
+
   .row .txt ul li {
     margin: 0 1em 0 -2em;
     line-height: 1.5em;
