@@ -75,7 +75,7 @@ button.blue {
   font-size: 1.8em;
   font-weight: 500;
   line-height: 1.5em;
-  margin: 0;
+  margin: 0 0 0.5em 0;
 }
 
 .row .txt p {
@@ -171,10 +171,6 @@ button.blue {
     width: 50%;
     padding: 3em;
     flex: 1;
-  }
-
-  .row .txt h2 {
-    margin: 0;
   }
 
   .row .txt ul li {
