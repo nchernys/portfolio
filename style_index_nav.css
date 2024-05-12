@@ -51,13 +51,13 @@ body {
 }
 
 .nav_contacts li {
-  margin: 0 0 0 2.5em;
+  margin: 0 1.5em;
 }
 
 .nav-contact img {
-  width: 1.5em;
+  width: 1.8em;
   height: auto;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: all 0.3s ease;
 }
 
