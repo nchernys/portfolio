@@ -20,6 +20,10 @@ button:active {
   transform: translate(1px, 2px);
 }
 
+.no-hover:active {
+  transform: translate(0, 0);
+}
+
 button.yellow {
   background-color: rgb(235, 159, 8);
   background-color: white;
