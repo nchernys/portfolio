@@ -23,7 +23,7 @@
 
 .form {
   margin: 0;
-  width: 80%;
+  width: 90%;
   flex-direction: column;
   justify-content: left;
   align-items: center;
@@ -100,20 +100,33 @@ textarea {
   border: 1px dotted rgb(45, 45, 45);
 }
 
+.contact-footer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-footer li {
+  margin: 0 3em 1.5em 0;
+}
+
+.contact-footer li a img {
+  font-size: 1em;
+}
+
 @media screen and (min-width: 1000px) {
   .inner_contact {
     height: 100vh;
-    padding: 0;
-    width: 50%;
+    padding: 2em 0 0;
+    width: 90%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   .form {
-    width: 90%;
-    justify-content: center;
+    width: 40%;
+    padding: 2em;
+    justify-content: flex-start;
   }
 
   label {
@@ -189,4 +202,9 @@ textarea {
   .close img:hover {
     width: 80%;
   }
+
+  .contact-footer li a img {
+    font-size: 1em;
+  }
+  
 }

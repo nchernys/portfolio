@@ -5,7 +5,8 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Natalia Chernysheva: Full Stack web development and web design, end-to-end website solutions, front end and back end with React.js, Express.js, Node.js, Django, Python, HTML, CSS, Bootstrap, Tawiwind CSS, Javascript, SEO optimization, database management, mobile-first responsive design.">
+        content="Natalia Chernysheva: Full Stack web development and web design, end-to-end website solutions, front end and back end with React.js, Express.js, Node.js, Django, Python, HTML, CSS, Bootstrap, Tawiwind CSS, Javascript, SEO optimization, database management, mobile-first responsive design, as well as CMS (Wordpress, Squarespace, Wix, Shopify). I work with individuals and small to medium businesses. If you want a business landing page, a restaurant online order and delivery, an online marketplace, or another website, I will be happy to design a dynamic website according to your needs.">
+
     <title>Natalia Chernysheva Portfolio</title>
     <link rel="preload" fetchpriority="high" as="image" href="images/welcome_page/chernysheva_photo.png"
         type="image/png">
@@ -59,7 +60,7 @@
                 <div class="photo">
                     <img src="images/welcome_page/chernysheva_photo.png" alt="photo">
                 </div>
-
+               
             </div>
             <div class="welcome_intro_text">
                 <h2>Natalia Chernysheva</h2>
@@ -190,10 +191,10 @@
                     <ul>
                         <li>features the React Calendar component enabling to display the dates available for the
                             reservation and to highlight the dates selected by the user</li>
-                        <li>uses APIs to fetch the necessary details from the dababase and
-                            to save them as a part of a new order</li>
+                        <li>uses REST APIs to interact with the MongoDB database</li>
                         <li>features the admin dashboard enabling the admins to add, update, and delete room details and
                             to review the guest orders</li>
+                            <li>integrate Stripe payment method (in the test mode)</li>
                         <li>implements the PDF invoice generator based on the order details</li>
                         <li>VPS deployed, CI/CD with GitHub Actions</li>
                         <li>mobile-first, responsive design</li>
@@ -410,12 +411,27 @@
     <div class="contact" id="contact">
         <div class="inner_contact" id="inner_contact">
             <form class="form" method="post" id="form-contact">
-                <h1>CONTACT</h1>
+                <h1>LET'S CONNECT!</h1>
+                <ul class="nav-order nav_contacts contact-footer">
+
+                    <li class="nav-contact"><a href="mailto:chernysn@gmail.com">
+                        <img class="" src="https://img.icons8.com/ios-filled/ffffff/100/gmail.png" alt="gmail"/></a></li>
+        
+                    <li class="nav-contact"><a href="https://github.com/nchernys"><img
+                                class="" src="https://img.icons8.com/ios-filled/100/ffffff/github.png"
+                                alt="github"></a></li>
+                    <li class="nav-contact"><a href="https://www.linkedin.com/in/natalia-chernysheva-5b286a30b/"> <img class=""
+                                src="https://img.icons8.com/ios-filled/100/ffffff/linkedin.png" alt="linkedin" /> </a></li>
+        
+                                <li class="nav-contact"><a href="https://blog.nchernysheva.com">
+                                    <img class="" src="https://img.icons8.com/ios-filled/ffffff/100/blogger.png" alt="blogger"/>
+                                </a></li>
+                </ul>
                 <label for="name">Your name:</label><br>
                 <input type="text" name="name" id="name" required> <br>
                 <label for="email">Your email:</label><br>
                 <input type="email" name="email" id="email" required> <br>
-                <label for="message">Your request:</label><br>
+                <label for="message">Your message:</label><br>
                 <textarea name="message" id="message" cols="50" rows="6" required></textarea><br>
                 <button type="submit" class="yellow" id="submit">Submit</button>
             </form>
