@@ -44,6 +44,7 @@ input[type="email"] {
   margin: 0.6em 0;
   box-sizing: border-box;
   font-family: "Oxanium";
+  font-size: 1.2em;
 }
 
 textarea {
