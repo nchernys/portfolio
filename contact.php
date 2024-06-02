@@ -1,31 +1,32 @@
-<?php 
-$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
-$email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : '';
-$message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $message = trim($_POST["message"]);
 
-$to = "chernysn@gmail.com";
-$subject = "Contact from from Portfolio website";
+    // Check if data was received
+    if (empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            header("Location: form.html?error=invalidinput");
+        exit;
+    }
 
-$headers = "From: noreply@demosite.com" . "\r\n";
-$headers .= "CC: somebodyelse@example.com" . "\r\n"; // Use .= to append the CC header.
+      $recipient = "chernysn@gmail.com";
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email address");
-}
+    
+    $subject = "New contact from $name";
 
-$txt = "Name: $name\r\nEmail: $email\r\nRequest: $message";
+    $email_content = "Name: $name\n";
+    $email_content .= "Email: $email\n\n";
+    $email_content .= "Message:\n$message\n";
 
-if (!empty($email)) {
-        $success = mail($to, $subject, $message, $headers);
-    if ($success) {
-                header("Location: success.html");
-        exit(); 
+     $email_headers = "From: $name <$email>";
+
+    if (mail($recipient, $subject, $email_content, $email_headers)) {
+        header("Location: success.html");
     } else {
-       
-        die("Failed to send email. Please try again later.");
+          header("Location: form.html?error=sendfail");
     }
 } else {
-    
-    die("Email address is required.");
+    header("Location: index.html");
 }
 ?>
