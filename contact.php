@@ -18,7 +18,7 @@ $txt = "Name: $name\r\nEmail: $email\r\nRequest: $message";
 if (!empty($email)) {
         $success = mail($to, $subject, $message, $headers);
     if ($success) {
-                header("Location: index.html");
+                header("Location: success.html");
         exit(); 
     } else {
        
