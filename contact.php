@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         header("Location: success.html");
+        exit;
     } else {
           header("Location: form.html?error=sendfail");
     }
