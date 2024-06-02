@@ -4,7 +4,7 @@ $email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_SANITIZE_EM
 $message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
 
 $to = "chernysn@gmail.com";
-$subject = "FROM WEB PORTFOLIO";
+$subject = "Contact from from Portfolio website";
 
 $headers = "From: noreply@demosite.com" . "\r\n";
 $headers .= "CC: somebodyelse@example.com" . "\r\n"; // Use .= to append the CC header.
