@@ -28,7 +28,7 @@
 }
 
 .welcome_intro_blurb p {
-  font-size: 1em;
+  font-size: 1.1rem;
   line-height: 2em;
   padding: 0 1.5em 0 0.5em;
 }
@@ -139,7 +139,7 @@
 
   .welcome_intro_blurb {
     width: 100%;
-    font-size: 0.9em;
+    font-size: 1rem;
     padding: 1em 8% 0 0;
     line-height: 2.5em;
     box-sizing: border-box;
@@ -185,11 +185,12 @@
   .home {
     width: 100%;
     padding: 0;
-    height: 90vh;
+    height: 88vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .home_inner {
     width: 70%;
     display: flex;
@@ -212,7 +213,7 @@
 
   .welcome_intro_text h1 {
     font-size: 2.4em;
-    margin: 0.7em 0 0.5em;
+    margin: 0.7rem 0;
   }
 
   .welcome_intro_text h2 {
@@ -228,9 +229,13 @@
   }
 
   .welcome_intro_blurb {
-    font-size: 1em;
+    width: 90%;
     height: 100%;
     padding: 0;
+  }
+
+  .welcome_intro_blurb p {
+    font-size: 1.1rem;
   }
 
   .welcome_intro_text img {

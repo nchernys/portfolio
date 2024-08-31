@@ -9,15 +9,16 @@
 }
 
 .inner_contact {
-  width: 100%;
+  width: 95%;
   padding: 4em 2em;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 
 }
 
 .contact h1 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 200;
   margin: 0 0 1.4em 0;
   text-align: left;
@@ -32,7 +33,7 @@
 }
 
 label {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -138,7 +139,7 @@ textarea {
   }
 
   label {
-    font-size: 1em;
+    font-size: 1.2rem;
   }
 
   input[type="text"],
