@@ -178,6 +178,13 @@ button.blue {
     flex: 1;
   }
 
+  .col-expanded {
+    padding: 3em;
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+
   .row .txt ul li {
     margin: 0 1em 0 -2em;
     line-height: 1.5em;
@@ -205,6 +212,10 @@ button.blue {
 
   .v-col img {
     height: 80%;
+  }
+
+  .col-expanded.v-col img {
+    height: 95%;
   }
 }
 
