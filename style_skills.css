@@ -73,29 +73,31 @@
   .skills_section {
     width: auto;
     flex-direction: row;
-    padding: 3em 0.5em;
+    padding: 3em 2em;
+    box-sizing: border-box;
   }
 
   .inner_skills_section {
     width: 100%;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-evenly;
+    gap: 1.5rem;
   }
 
   .skills {
-    width: 20%;
-    margin: 0 1.5em;
+    width: 25%;
     padding: 1.5em 0;
   }
 
   .skills h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
   }
 
   .skills p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2em;
-    font-size: 1.2rem;
   }
 }

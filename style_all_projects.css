@@ -76,20 +76,20 @@ button.blue {
 }
 
 .row .txt h2 {
-  font-size: 1.8em;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.5em;
   margin: 0 0 0.5em 0;
 }
 
 .row .txt p {
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.5em;
 }
 
 .row .txt ul li {
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: 200;
   margin: 0 0.8em 0 -1.2em;
   line-height: 1.5em;
@@ -98,7 +98,7 @@ button.blue {
 
 .row .txt ul li ul li {
   margin: auto auto auto -1.5em;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .col {
@@ -189,7 +189,7 @@ button.blue {
     margin: 0 1em 0 -2em;
     line-height: 1.5em;
     text-align: left;
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   .row .txt ul li ul li {
@@ -229,22 +229,23 @@ button.blue {
   }
 
   .row .txt h2 {
-    font-size: 1.6em;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.5em;
   }
 
   .row .txt p {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: 300;
   }
 
   .row .txt ul li {
-    font-size: 0.95em;
+    font-size: 1rem;
     font-weight: 200;
     margin: 0.5em 0 0 -2em;
   }
+
   .col button {
     font-size: 1em;
   }

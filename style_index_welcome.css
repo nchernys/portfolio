@@ -28,7 +28,7 @@
 }
 
 .welcome_intro_blurb p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 2em;
   padding: 0 1.5em 0 0.5em;
 }
@@ -235,7 +235,7 @@
   }
 
   .welcome_intro_blurb p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .welcome_intro_text img {
