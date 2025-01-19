@@ -30,7 +30,7 @@
 .welcome_intro_blurb p {
   font-size: 1rem;
   line-height: 2em;
-  padding: 0 1.5em 0 0.5em;
+  padding: 0 1.5em 0 0;
 }
 
 .welcome_intro_photo {
@@ -45,8 +45,8 @@
   overflow: hidden;
   border-radius: 50%;
   width: 50%;
-  --width: 50%;
-  padding-bottom: var(--width);
+  aspect-ratio: 1;
+  height: auto;
   position: relative;
   margin-bottom: 2.5em;
 }
@@ -98,6 +98,20 @@
 @media screen and (min-width: 600px) {
   .home {
     width: 100%;
+    padding: 15%;
+    height: auto;
+    min-height: none;
+    box-sizing: border-box;
+  }
+
+  .photo {
+    max-width: 14rem;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .home {
+    width: 100%;
     padding: 15% 5%;
     height: auto;
     min-height: none;
@@ -111,7 +125,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     box-sizing: border-box;
     transform: translateY(-3em);
@@ -154,13 +168,12 @@
     height: 50%;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .photo {
     width: 90%;
-    --width: 90%;
-    padding-bottom: var(--width);
+    max-width: none;
   }
 
   .welcome_intro_text h1 {
@@ -196,7 +209,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     padding: 0;
     box-sizing: border-box;
     transform: translateY(0);
@@ -257,8 +270,6 @@
     overflow: hidden;
     border-radius: 50%;
     width: 80%;
-    --width: 80%;
-    padding-bottom: var(--width);
     position: relative;
   }
 
