@@ -5,7 +5,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Natalia Chernysheva: Full Stack web development and web design, end-to-end website solutions, front end and back end with React.js / Next.js, Express.js, Node.js, HTML5, CSS3, Bootstrap, Tailwind CSS, Javascript, database management, mobile-first responsive design, as well as CMS (Wordpress, Squarespace, Wix, Shopify). I work with individuals and small to medium businesses, and volunteer for non-profit organizations. If you want a business landing page, a restaurant online order and delivery, an online marketplace, or another website, I will be happy to design a dynamic website according to your needs.">
+        content="Natalia Chernysheva: Full Stack web development and web design, end-to-end website solutions, front end and back end with React.js / Next.js, Express.js, Node.js, HTML5, CSS3, Bootstrap, Tailwind CSS, Javascript, Java, database management, mobile-first responsive design, as well as CMS (Wordpress, Squarespace, Wix, Shopify). I work with individuals and small to medium businesses, and volunteer for non-profit organizations. If you want a business landing page, a restaurant online order and delivery, an online marketplace, or another website, I will be happy to design a dynamic website according to your needs.">
 
     <title>Natalia Chernysheva Portfolio</title>
     <link rel="preload" fetchpriority="high" as="image" href="images/welcome_page/chernysheva_photo.png"
@@ -92,7 +92,7 @@
                 <div class="welcome_intro_blurb">
                     <p>Hey, I'm Natalia, and I'm a full stack developer. I'm proficient in <strong>HTML</strong>,
                         <strong>CSS</strong>, <strong>Javascript</strong>, 
-                        <strong>Typescript</strong>,  <strong>Bootstrap</strong>, <strong>MERN stack</strong> (MongoDB, ExpressJS, ReactJS, NodeJS),
+                        <strong>Typescript</strong>,  <strong>Bootstrap</strong>, <strong>MERN stack</strong> (MongoDB, ExpressJS, ReactJS, NodeJS), <strong>Java</strong>
                         <strong>Django framework</strong> (Python), and databases <strong>MySQL</strong>,
                         <strong>PostgreSQL</strong>, <strong>MongoDB</strong>. Working on websites allows me to blend
                         technical skills with creativity, ensuring a seamless and visually appealing <strong>user
@@ -127,11 +127,13 @@
                 <p>Front-end and back-end development, end-to-end solutions for dynamic web applications, seamless user
                     experience.</p>
             </div>
+            <!--
             <div class="skills"><img src="images/skills_page/backend.png" alt="">
                 <h4>Back-End Web Development</h4>
                 <p>Design and optimization of server-side systems, databases, and APIs for efficient web applications.
                 </p>
             </div>
+            -->
             <div class="skills"><img src="images/skills_page/responsive_design.png" alt="">
                 <h4>Responsive Design</h4>
                 <p>Enabling websites to seamlessly adjust to diverse devices and screen dimensions, delivering an
@@ -152,17 +154,18 @@
             <div class="row">
                 <div class='col-expanded img col-img v-col'>
 
-                    <img class="img_back" src="images/projects_page/animations-8.svg"
+                    <img class="img_back" src="images/projects_page/animations-preview.png"
                         alt="front end animations project">
                 </div>
 
                 <div class="col txt">
                     <h2>Front End Animations</h2>
-                    <p>NextJS, CSS, GSAP</p>
+                    <p>The page features smooth transitions that react to the user's scrolling.</p>
                     <ul>
-                        <li>implemented SVG text and arrow animations using GSAP for smooth, gradual path-based emergence</li>
-                        <li>created staggered animations for navigation bar buttons and cards to enhance user experience with seamless transitions.</li>
-                        <li>developed scroll-linked animations to trigger dynamic visual effects as users navigate through the page</li>
+                        <li>NextJS, CSS, GSAP</li>
+                        <li>SVG text and arrow animations</li>
+                        <li>Staggered animations</li>
+                        <li>Scroll-linked animations </li>
                     </ul>
                     <div class="button-group-projects">
                         <button class="yellow"
@@ -173,6 +176,37 @@
                 </div>
             </div>
 
+            <div class="row order">
+                <div class="col txt">
+                    <h2>Bent Christy Graduate Assistance Program (BCGAP) </h2>
+
+                    <p class="client"><u>Client</u>: BCGAP</p>
+
+                    <p>Scholarship application managementment system.</p>
+                    <ul>
+                        <li>ReactJS, ExpressJS, MySQL</li>
+                        <li>User-centric responsive design</li>
+                        <li>RESTfulAPIs, MySQL database integration</li>
+                        <li>Authentication & Authorisation </li>
+                    </ul>
+
+
+                    <div class="button-group-projects">
+                        <button class="yellow"
+                            onclick="window.open('https://www.bcgap.org', '_blank')">
+                            View</button>
+
+                        
+                    </div>
+                </div>
+                <div class='col img col-img v-col'>
+
+                    <img class="img_back" src="images/projects_page/bcgap-preview.png" alt="BCGAP nonprofit">
+
+                </div>
+            </div>
+
+            <!--
             <div class="row order">
                 <div class="col txt">
                     <h2>Mental wellness website </h2>
@@ -205,7 +239,7 @@
 
                 </div>
             </div>
-
+            -->
 
 
 
@@ -217,18 +251,13 @@
                 </div>
 
                 <div class="col txt">
-                    <h2>Hotel reservation</h2>
-                    <p>MERN stack: MongoDB, ExpressJS, ReactJS, NodeJS, TailwindCSS</p>
+                    <h2>Hotel reservation application</h2>
+                    <p>The application allows users to check the availability of their desired hotel room and book it for their selected dates.</p>
                     <ul>
-                        <li>features the React Calendar component enabling to display the dates available for the
-                            reservation and to highlight the dates selected by the user</li>
-                        <li>uses REST APIs to interact with the MongoDB database</li>
-                        <li>features the admin dashboard enabling the admins to add, update, and delete room details and
-                            to review the guest orders</li>
-                            <li>integrate Stripe payment method (in the test mode)</li>
-                        <li>implements the PDF invoice generator based on the order details</li>
-                        <li>VPS deployed, CI/CD with GitHub Actions</li>
-                        <li>mobile-first, responsive design</li>
+                        <li>ReactJS, ExpressJS, MongoDB, TailwindCSS</li>
+                        <li>Mobile-first responsive design</li>
+                        <li>RESTful APIs, MongoDB integration</li>
+                        <li>Stripe payment gateway integration</li>
                     </ul>
                     <div class="button-group-projects">
                         <button class="yellow"
@@ -242,17 +271,14 @@
             <div class="row order">
                 <div class="col txt">
                     <h2>School gradebook </h2>
-                    <p>MERN stack: MongoDB, ExpressJS, ReactJS, NodeJS </p>
-                    <ul>
-                        <li>features user authentication system (signup, login, logout)</li>
+                    <p>An academic management tool allowing users to enroll students in courses and record their grades.</p>
+                   <ul>
+                        <li>ReactJS, ExpressJS, MongoDB </li>
                         <li>
-                            integrates RESTful APIs to communicate with the MongoDB to add, update, delete
-                            students and courses, to enroll and disenroll students from the courses, to create, update,
-                            and delete course assignments and to post and update course grades
+                            RESTful APIs, MongoDB integration
                         </li>
-                        <li>implements an easy-to-use click function to post and update grades in the
-                            gradebook table</li>
-                        <li>VPS deployed, CI/CD with GitHub Actions </li>
+                        <li>JWT authentication & authorisation</li>
+                        <li>Click-to-update grades option</li>
                     </ul>
 
 
@@ -281,22 +307,13 @@
                 </div>
 
                 <div class="col txt">
-                    <h2>Design studio landing page</h2>
-                    <p>ReactJs, CSS </p>
+                    <h2>Design Studio </h2>
+                    <p>Langing page featuring hero with a call-to-action, projects, team, and testimonials sections</p>
                     <ul>
-                        <li>features a hero with the call-for-action button</li>
-                        <li>implements an image gallery with an option to magnify images upon hover and to expand to
-                            full-size upon
-                            click</li>
-                        <li>enables two image slider options:
-                            <ul>
-                                <li>updates the preview images on the left or right button click, cycling through a set
-                                    of three images at
-                                    a time</li>
-                                <li>transitions between individual images within the full-view mode</li>
-                        </li>
-                    </ul>
-                    <li>mobile-first, responsive design</li>
+                        <li>ReactJs, CSS</li>
+                        <li>User-centric vibrant design</li>
+                        <li>Image gallery with full-view mode</li>
+                        <li>mobile-first, responsive design</li>
                     </ul>
                     <div class="button-group-projects">
                         <button class="yellow"
@@ -307,6 +324,7 @@
                 </div>
             </div>
 
+            <!--
             <div class="row order">
                 <div class="col txt">
                     <h2>Cafe Application</h2>
@@ -328,7 +346,7 @@
                     <img class="img_back" src="images/projects_page/cafe-wordpress.png" alt="cafe landing page project">
                 </div>
             </div>
-
+            -->
             <!--
             <div class="row">
                 <div class='col col-img v-col'>
@@ -402,7 +420,8 @@
                     </div>
                 </div>
             </div>
--->
+
+
             <div class="row order">
                 <div class='h-col col img col-img'>
                     <img class="img_back" src="images/projects_page/mozilla_addon.png" alt="mozilla extension project">
@@ -433,7 +452,12 @@
                
 
             </div>
+
+            -->
+
         </div>
+
+
     </div>
 
     </div>
