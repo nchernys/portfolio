@@ -9,6 +9,11 @@ chat_btn.addEventListener("click", () => {
   }
 });
 
+let chat_close_btn = document.querySelector(".chat-close");
+chat_close_btn.addEventListener("click", () => {
+  chat.style.display = "none";
+});
+
 let chat_send_btn = document.getElementById("chat_send_btn");
 let new_msg = document.getElementById("chat_texting_input");
 let chat_body = document.getElementById("chat_body");
