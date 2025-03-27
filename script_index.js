@@ -1,5 +1,6 @@
 let chat_btn = document.getElementById("pulse");
 let chat = document.getElementById("chat");
+let chat_close_btn = document.getElementById("chat-close");
 
 chat_btn.addEventListener("click", () => {
   if (chat.style.display == "flex") {
@@ -9,9 +10,11 @@ chat_btn.addEventListener("click", () => {
   }
 });
 
-let chat_close_btn = document.querySelector(".chat-close");
 chat_close_btn.addEventListener("click", () => {
-  chat.style.display = "none";
+  if (chat.style.display == "flex") {
+    chat.style.display = "none";
+    console.log("Closed");
+  }
 });
 
 let chat_send_btn = document.getElementById("chat_send_btn");
