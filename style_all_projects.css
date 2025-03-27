@@ -1,7 +1,4 @@
-.project-title {
-  margin-bottom: 1em;
-  font-size: 2.4em;
-}
+
 .button-group-projects {
   display: flex;
   justify-content: center;
@@ -9,11 +6,12 @@
 
 button {
   font-family: "Oxanium", "fallback for Oxanium";
-  width: 6em;
+  width: 6rem;
   height: 2.5em;
-  font-size: 0.9em;
+  font-size: 1rem;
   margin: 1.4em 0.5em 2em 0;
   border: none;
+  padding: 0.5em 1em;
 }
 
 button:active {
@@ -39,8 +37,10 @@ button.blue {
 .projects_section {
   width: 100%;
   height: auto;
-  padding: 5em 0;
+  padding: 1rem 0 5rem;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 .projects_section .wrapper {
@@ -63,15 +63,17 @@ button.blue {
 
 .row {
   width: 100%;
+  max-width: 30rem;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .row .txt {
-  text-align: center;
+  text-align: left;
   box-sizing: border-box;
 }
 
@@ -105,17 +107,17 @@ button.blue {
 .col {
   width: 100%;
   flex: 1;
-  padding: 8em 1.5em;
+  padding: 2em 1.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   box-sizing: border-box;
   border-radius: 0;
 }
 
 .v-col {
-  padding: 5em 2em;
+  padding: 2rem;
 }
 
 .h-col {
@@ -124,7 +126,7 @@ button.blue {
 
 .col button {
   padding: 0.5em 1em;
-  font-size: 1.2em;
+  font-size: 1rem;
   margin: 3em 0.5em 1em;
 }
 
@@ -134,20 +136,20 @@ button.blue {
   height: auto;
 }
 
-.col-img {
-  background-color: rgba(54, 59, 64, 0.05);
-}
 
 p.client {
   margin-bottom: 1rem;
 }
 
 @media screen and (min-width: 600px) {
-  .project-title {
-    display: none;
+  .col {
+    padding: 2rem 4rem;
   }
+}
+
+@media screen and (min-width: 830px) {
+
   .projects_section {
-    padding: 5em 0;
     max-height: auto;
     color: #343a40;
   }
@@ -160,11 +162,13 @@ p.client {
   }
 
   .row {
+    max-width: none;
     display: flex;
     min-height: 50em;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
+    margin-bottom: 0;
   }
 
   .row .txt {
@@ -205,10 +209,6 @@ p.client {
     order: 0;
   }
 
-  .col-img {
-    background-color: rgba(54, 59, 64, 0.05);
-  }
-
   .col img {
     width: 100%;
     height: 100%;
@@ -225,9 +225,6 @@ p.client {
 }
 
 @media screen and (min-width: 1000px) {
-  .project-title {
-    display: none;
-  }
 
   .row {
     height: 50em;

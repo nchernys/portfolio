@@ -1,7 +1,6 @@
 .home {
   width: auto;
   height: auto;
-  position: relative;
   padding: 10% 5% 20% 5%;
   box-sizing: border-box;
 }
@@ -23,14 +22,14 @@
 .welcome_intro_text {
   width: 100%;
   height: 100%;
-  margin: 0 0 12%;
+  margin: 0;
   order: 1;
 }
 
 .welcome_intro_blurb p {
-  font-size: 1rem;
+  font-size: .9rem;
   line-height: 2em;
-  padding: 0 1.5em 0 0;
+  padding: 0;
 }
 
 .welcome_intro_photo {
@@ -44,7 +43,8 @@
 .photo {
   overflow: hidden;
   border-radius: 50%;
-  width: 50%;
+  width: 80%;
+  max-width: 13rem;
   aspect-ratio: 1;
   height: auto;
   position: relative;
@@ -60,14 +60,20 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
 .welcome_intro_text h1 {
-  font-size: 2.2em;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 .welcome_intro_text h2 {
-  font-size: 1.5em;
+  font-size: 1.3rem;
   font-weight: 100;
+  padding: 1rem 0;
 }
 
 .welcome_intro_text h3 {
@@ -103,6 +109,10 @@
     min-height: none;
     box-sizing: border-box;
   }
+
+  .welcome_intro_blurb p {
+    font-size: 1rem; 
+  } 
 
   .photo {
     max-width: 14rem;
@@ -176,20 +186,7 @@
     max-width: none;
   }
 
-  .welcome_intro_text h1 {
-    font-size: 3em;
-    margin: 0;
-  }
-
-  .welcome_intro_text h2 {
-    font-size: 1.8em;
-  }
-
-  .welcome_intro_text h3 {
-    font-size: 1em;
-  }
-
-  .col img {
+    .col img {
     margin: 0 auto;
   }
 }
@@ -225,12 +222,12 @@
   }
 
   .welcome_intro_text h1 {
-    font-size: 2.4em;
-    margin: 0.7rem 0;
+    font-size: 2.2rem;
+    margin: 0;
   }
 
   .welcome_intro_text h2 {
-    font-size: 1.3em;
+    font-size: 1.5rem;
     font-weight: 300;
   }
 
@@ -249,6 +246,7 @@
 
   .welcome_intro_blurb p {
     font-size: 1rem;
+    padding: 0 1.5rem 0 0;
   }
 
   .welcome_intro_text img {

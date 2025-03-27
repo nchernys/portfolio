@@ -3,9 +3,48 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  padding: 5em 0;
-  background-color: #e9ecefa5;
+  padding: 3em 0 0;
   color: #343a40;
+  position: relative;
+}
+
+.deco1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130%, -40%);
+  z-index: -10;
+}
+
+.deco2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 400%);
+  z-index: -10;
+}
+
+.deco3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-140%, 580%);
+  z-index: -10;
+}
+
+.deco1 img {
+  width: 30rem;
+  opacity: .22;
+}
+
+.deco2 img {
+  width: 25rem;
+  opacity: .22;
+}
+
+.deco3 img {
+  width: 35rem;
+  opacity: .22;
 }
 
 .inner_skills_section {
@@ -38,6 +77,21 @@
   font-size: 1.3em;
   font-weight: 100;
   line-height: 2.2em;
+}
+
+.title-wrapper {
+  text-align: center;
+  margin: 3rem 0 4.5rem;
+}
+
+.project-title {
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+
+.title-wrapper h2 {
+  font-size: 1.3rem;
+  font-weight: 200
 }
 
 @media screen and (min-width: 600px) {
@@ -73,7 +127,6 @@
   .skills_section {
     width: auto;
     flex-direction: row;
-    padding: 3em 2em;
     box-sizing: border-box;
   }
 
@@ -99,5 +152,10 @@
   .skills p {
     font-size: 1rem;
     line-height: 2em;
+  }
+
+  .title-wrapper {
+    text-align: center;
+    margin: 3rem 0 2rem;
   }
 }
