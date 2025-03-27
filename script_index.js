@@ -13,7 +13,6 @@ chat_btn.addEventListener("click", () => {
 chat_close_btn.addEventListener("click", () => {
   if (chat.style.display == "flex") {
     chat.style.display = "none";
-    console.log("Closed");
   }
 });
 
