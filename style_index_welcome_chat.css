@@ -12,7 +12,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1200;
 }
 
 @keyframes pulse {
@@ -47,6 +46,10 @@
   cursor: pointer;
 }
 
+.pulse_div {
+  z-index: 1200;
+}
+
 .chat {
   position: absolute;
   border: 0.5px rgba(0, 135, 255, 0.4) solid;
@@ -59,7 +62,6 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 5px 5px 15px rgba(200, 200, 200);
-  z-index: 1200;
 }
 
 .chat_heading {
