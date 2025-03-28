@@ -39,7 +39,6 @@ button.blue {
   height: auto;
   padding: 1rem 0 5rem;
   box-sizing: border-box;
-  z-index: 1;
 }
 
 .projects_section .wrapper {
