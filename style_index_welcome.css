@@ -1,5 +1,6 @@
 .home {
   width: auto;
+  max-height: 40rem;
   height: auto;
   padding: 10% 5% 20% 5%;
   box-sizing: border-box;
@@ -268,6 +269,8 @@ h1, h2, h3 {
     overflow: hidden;
     border-radius: 50%;
     width: 80%;
+    max-width: 15rem;
+    border: 2px res solid;
     position: relative;
   }
 
